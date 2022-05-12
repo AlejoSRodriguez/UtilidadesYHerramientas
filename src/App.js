@@ -1,9 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function App() {
 
-  
+  useEffect(() => {
+    axios.get('https://pure-sierra-23454.herokuapp.com/api/truco')
+    .then(response => {
+        console.log(response)
+    })
+  },[])
 
   return (
     <div className="App">
